@@ -19,6 +19,8 @@ import {
 } from "@/themes/app.constant";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
+import { BlurView } from "expo-blur";
+
 // import AuthModal from "../auth/auth.modal";
 
 interface SlideProps{
@@ -61,7 +63,7 @@ export default function Slide({
           fill={"url(#gradient)"}
         />
       </Svg>
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <View>{slide.image}</View>
         <View>
           <View
@@ -102,7 +104,7 @@ export default function Slide({
             </Text>
           </View>
         </View>
-      </View>
+      </View> */}
       <View style={styles.indicatorContainer}>
         {Array.from({ length: totalSlides }).map((_, i) => (
           <TouchableOpacity
@@ -143,17 +145,42 @@ export default function Slide({
           />
         </TouchableOpacity>
       )}
-      
+      {/* <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <Pressable style={{ flex: 1 }} onPress={() => setModalVisible(false)}>
+          <BlurView style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
+            <Pressable style={{
+              width: windowWidth(420),
+              height: windowHeight(250),
+              marginHorizontal: windowWidth(50),
+              backgroundColor: "#fff",
+              borderRadius: 30,
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+            onPress={(e) => e.stopPropagation()}
+            >
+
+            </Pressable>
+          </BlurView>
+        </Pressable>
+      </Modal> */}
     </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
-    padding: scale(60),
-    paddingTop: verticalScale(100),
-    alignItems: "center",
+    // ...StyleSheet.absoluteFillObject,
+    // padding: scale(60),
+    // paddingTop: verticalScale(100),
+    // alignItems: "center",
   },
   indicatorContainer: {
     flexDirection: "row",

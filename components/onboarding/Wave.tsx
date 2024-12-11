@@ -63,7 +63,7 @@ export default function Wave({
     const d = [
       "M 0 0",
       `H ${p1x}`,
-      `V ${p1y}`,
+      `V${p1y}`,
       `C ${p1x} ${p1y + C} ${p2x} ${p2y} ${p2x} ${p2y}`,
       `C ${p2x} ${p2y} ${p3x} ${p3y - C} ${p3x} ${p3y}`,
       `C ${p3x} ${p3y + C} ${p4x} ${p4y} ${p4x} ${p4y}`,
